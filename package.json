@@ -1,0 +1,38 @@
+{
+  "name": "page-evaluate",
+  "version": "1.0.0",
+  "description": "Monitor web pages for changes",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npx semistandard \"**/*[!.test].js\" --fix",
+    "test": "mocha || :",
+    "tests-web-server": "http-server --silent -p 7777 test/pages &",
+    "pretest": "npm run tests-web-server",
+    "posttest": "pkill -f http-server"
+  },
+  "keywords": [
+    "change",
+    "changed",
+    "changes",
+    "diff",
+    "notify",
+    "price",
+    "site"
+  ],
+  "author": "Adam Quinton",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zvakanaka/page-evaluate.git"
+  },
+  "dependencies": {
+    "body-snatchers": "^1.1.0",
+    "jsdom": "^16.2.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "http-server": "^0.12.3",
+    "mocha": "^7.1.2",
+    "semistandard": "^14.2.0"
+  }
+}
