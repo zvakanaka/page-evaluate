@@ -33,6 +33,6 @@
     "chai": "^4.2.0",
     "http-server": "^0.12.3",
     "mocha": "^7.1.2",
-    "semistandard": "^14.2.0"
+    "semistandard": "^15.0.0"
   }
 }
