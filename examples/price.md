@@ -5,6 +5,7 @@
 require('dotenv').config(); 
 const { window } = require('page-evaluate');
 const { send } = require('emailjs-gmail')(process.env.GMAIL_USERNAME, process.env.GMAIL_PASSWORD);
+const getNumbersOnly = (str) => (str.match(/[0-9\.]+/g) || []).join('');
 
 const DESIRED_PRICE = 50; 
 
